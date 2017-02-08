@@ -70,6 +70,12 @@ a, a:visited, a:active {
   color: black;
 }
 
+.contact-email {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
 .sticky-wrapper {
   position: fixed;
   z-index: 100;
