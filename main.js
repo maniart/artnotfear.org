@@ -43,9 +43,11 @@ jQuery(document).ready(function($) {
     if (!letterData) {
       return;
     }
-    window.scroll(0,0);
-    setTitle(language);
-    setLetter(language);
+    $("html, body").animate({ scrollTop: "0px" }, function() {
+      setTitle(language);
+      setLetter(language);
+    });
+
   }
 
 
