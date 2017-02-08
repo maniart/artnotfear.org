@@ -72,6 +72,7 @@ a, a:visited, a:active {
 
 .sticky-wrapper {
   position: fixed;
+  z-index: 100;
   bottom: 0;
   min-height: 80px;
   border-top: 2px solid black;
