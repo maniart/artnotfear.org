@@ -1,7 +1,17 @@
 jQuery(document).ready(function($) {
 
-  $langToggle = $('.language-selector');
-  var letterData = undefined;
+  var $langToggle = $('.language-selector');
+  var $sign = $('.sign');
+  var $window = $(window);
+
+  var windowWidth = $window.width();
+  var windowHeight = $window.height();
+  var mobileBreakPoint = 768;
+  var letterData;
+
+  function isMobile() {
+    return windowWidth < mobileBreakPoint;
+  }
 
   $.ajax({
     url: './letter.json',
@@ -36,7 +46,6 @@ jQuery(document).ready(function($) {
       });
       $letter.fadeIn(300);
     });
-
   }
 
   function setContent(language) {
@@ -47,9 +56,7 @@ jQuery(document).ready(function($) {
       setTitle(language);
       setLetter(language);
     });
-
   }
-
 
   function initLanguageToggle() {
     $langToggle.removeAttr('disabled');
@@ -59,6 +66,15 @@ jQuery(document).ready(function($) {
       var targetLanguage = $(this).children(':selected').attr('value');
       setContent(targetLanguage);
       console.log(targetLanguage);
+    });
+  }
+
+  if(isMobile()) {
+    $sign.attr('target', '_blank');
+  } else {
+    $sign.venobox({
+      framewidth: (windowWidth - 100) + 'px',
+      frameheight: (windowHeight - 100) + 'px'
     });
   }
 
