@@ -1,0 +1,23 @@
+{
+  "name": "artnotfear.org",
+  "homepage": "https://github.com/maniart/artnotfear.org",
+  "authors": [
+    "maniart <mani.art@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.1",
+    "flexboxgrid": "~6.3.2",
+    "reset-css": "~2.2.0"
+  }
+}
